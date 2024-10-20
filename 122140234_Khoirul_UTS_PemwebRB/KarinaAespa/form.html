@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pendaftaran Fans AESPA</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #0d1117; /* Dark background */
+        }
+        .header {
+            background-color: #161b22; /* Darker blue */
+            color: #ffffff;
+            padding: 15px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            padding: 10px;
+        }
+        .sidebar {
+            background-color: #21262d; /* Sidebar blackish blue */
+            padding: 20px; /* Padding for sidebar */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+        }
+        .sidebar h2 {
+            margin-bottom: 15px;
+            color: #58a6ff; /* Light blue for sidebar heading */
+        }
+        .nav {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .nav-item {
+            margin-bottom: 15px; /* Increased margin for spacing between items */
+        }
+        .nav-link {
+            color: #58a6ff; /* Light blue for nav links */
+            padding: 5px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: block; /* Make the link a block element for easier clicking */
+        }
+        .nav-link:hover {
+            background-color: #58a6ff; /* Light blue */
+            color: #ffffff; /* Change text color to white on hover */
+        }
+        main {
+            flex-grow: 1;
+            padding-left: 20px;
+            color: #ffffff; /* White text in main content */
+        }
+        h2 {
+            color: #58a6ff; /* Light blue for headings */
+        }
+        .form-container {
+            background-color: #21262d; /* Darker background for form */
+            border-radius: 10px; /* Rounded corners */
+            padding: 30px; /* Padding inside form */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+            margin-bottom: 20px; /* Space below form */
+        }
+        .form-group label {
+            color: #ffffff; /* White color for labels */
+        }
+        footer {
+            background-color: #161b22; /* Darker blue */
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px; /* Space above footer */
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header -->
+        <header class="header row text-center">
+            <div class="col">
+                <h1 itemprop="name">.</h1>
+                <img src="images/logoaespa.png" alt="Logo AESPA" class="img-fluid" style="max-width: 150px;">
+            </div>
+        </header>
+
+        <!-- Sidebar and Form -->
+        <div class="row content">
+            <aside class="sidebar col-12 col-lg-3">
+                <h2>Menu</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Pendaftaran Member Fans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="table.html">Tabel</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main Form Section -->
+            <main class="col-12 col-lg-9">
+                <div class="form-container">
+                    <h2>Formulir Pendaftaran Fans AESPA</h2>
+                    <form id="fansForm" method="GET" action="table.html">
+                        <!-- Nama Lengkap -->
+                        <div class="form-group" itemscope itemtype="http://schema.org/Person">
+                            <label for="nama">Nama Lengkap:</label>
+                            <input type="text" class="form-control" id="nama" name="nama" placeholder="Masukkan nama lengkap Anda" itemprop="name" required>
+                        </div>
+
+                        <!-- Jenis Kelamin -->
+                        <div class="form-group">
+                            <label for="jenis_kelamin">Jenis Kelamin:</label>
+                            <select class="form-control" id="jenis_kelamin" name="jenis_kelamin" required>
+                                <option value="">Pilih Jenis Kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                        </div>
+
+                        <!-- Tanggal Lahir -->
+                        <div class="form-group">
+                            <label for="tanggal_lahir">Tanggal Lahir:</label>
+                            <input type="date" class="form-control" id="tanggal_lahir" name="tanggal_lahir" itemprop="birthDate" required>
+                        </div>
+
+                        <!-- Alamat Email -->
+                        <div class="form-group">
+                            <label for="email">Alamat Email:</label>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Masukkan email Anda" required>
+                        </div>
+
+                        <!-- Kata Sandi -->
+                        <div class="form-group">
+                            <label for="password">Kata Sandi:</label>
+                            <input type="password" class="form-control" id="password" name="password" placeholder="Masukkan kata sandi Anda" required>
+                        </div>
+
+                        <!-- Pilihan Anggota AESPA -->
+                        <div class="form-group">
+                            <label>Siapa anggota AESPA favorit Anda?</label><br>
+                            <div class="form-check" itemscope itemtype="http://schema.org/Person">
+                                <input class="form-check-input" type="radio" name="anggota_favorit" id="karina" value="Karina" itemprop="name" required>
+                                <label class="form-check-label" for="karina">Karina</label>
+                            </div>
+                            <div class="form-check" itemscope itemtype="http://schema.org/Person">
+                                <input class="form-check-input" type="radio" name="anggota_favorit" id="ningning" value="Ningning" itemprop="name" required>
+                                <label class="form-check-label" for="ningning">Ningning</label>
+                            </div>
+                            <div class="form-check" itemscope itemtype="http://schema.org/Person">
+                                <input class="form-check-input" type="radio" name="anggota_favorit" id="winter" value="Winter" itemprop="name" required>
+                                <label class="form-check-label" for="winter">Winter</label>
+                            </div>
+                            <div class="form-check" itemscope itemtype="http://schema.org/Person">
+                                <input class="form-check-input" type="radio" name="anggota_favorit" id="giselle" value="Giselle" itemprop="name" required>
+                                <label class="form-check-label" for="giselle">Giselle</label>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="btn btn-primary">Daftar</button>
+                    </form>
+                </div>
+            </main>
+        </div>
+
+        <!-- Footer -->
+        <footer class="row text-center">
+            <div class="col">
+                <p>© 2024 AESPA Fans Club. Semua hak dilindungi.</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        document.getElementById('fansForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Mencegah pengiriman formulir yang biasa
+            
+            // Membuat query string dari data form
+            const formData = new FormData(this);
+            const queryString = new URLSearchParams(formData).toString();
+
+            // Redirect ke halaman table.html dengan query string yang sudah dibuat
+            window.location.href = 'table.html?' + queryString;
+        });
+    </script>
+</body>
+</html>

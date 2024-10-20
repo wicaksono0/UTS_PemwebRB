@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id" itemscope itemtype="http://schema.org/WebPage">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idola Saya - Tabel</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #0d1117; /* Latar belakang gelap */
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            flex-direction: row;
+            padding: 15px;
+        }
+        header {
+            background-color: #161b22; /* Warna header lebih gelap */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+            color: #ffffff; /* Warna teks header putih */
+            padding: 1%; /* Padding untuk header */
+        }
+        footer {
+            background-color: #161b22; /* Warna footer gelap */
+            color: #ffffff; /* Teks putih di footer */
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px; /* Ruang di atas footer */
+        }
+        .sidebar {
+            background-color: #21262d; /* Sidebar hitam kebiruan */
+            color: #ffffff; /* Teks putih di sidebar */
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            margin-right: 15px; /* Ruang di antara sidebar dan konten utama */
+            width: 100%; /* Lebar sidebar */
+        }
+        .sidebar h2 {
+            margin-bottom: 15px;
+            color: #58a6ff; /* Warna biru muda untuk judul sidebar */
+        }
+        .nav-item {
+            margin-bottom: 10px; /* Ruang antara item nav */
+        }
+        .nav-link {
+            color: #58a6ff; /* Teks biru muda untuk link */
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .nav-link:hover {
+            background-color: #58a6ff; /* Biru muda saat hover */
+            color: #ffffff; /* Teks putih saat hover */
+            padding: 5px 10px; /* Tambah padding saat hover */
+            border-radius: 4px; /* Sudut melengkung saat hover */
+        }
+        main {
+            flex-grow: 1;
+            padding-left: 20px;
+            padding-top: 15px; /* Padding atas untuk main */
+        }
+        h2 {
+            color: #58a6ff; /* Warna biru muda untuk judul */
+        }
+        table {
+            width: 100%; /* Membuat tabel mengisi lebar penuh */
+            margin-top: 20px;
+        }
+        th, td {
+            white-space: nowrap;
+            text-align: center; /* Rata tengah untuk teks tabel */
+        }
+        th {
+            background-color: #21262d; /* Warna latar belakang untuk header tabel */
+            color: #58a6ff; /* Warna teks biru muda untuk header tabel */
+        }
+        thead {
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            background-color: #21262d; /* Warna latar belakang header tabel */
+        }
+
+        /* Warna latar belakang untuk baris genap */
+        tbody tr:nth-child(even) {
+            background-color: #adadad; /* Warna hitam kebiruan untuk baris genap */
+        }
+
+        /* Warna latar belakang untuk baris ganjil */
+        tbody tr:nth-child(odd) {
+            background-color: #ffffff; /* Warna putih untuk baris ganjil */
+        }
+
+        /* Efek saat baris di sorot (hover) */
+        tbody tr:hover {
+            background-color: #58a6ff; /* Highlight biru muda saat di hover */
+        }
+
+        .form-container {
+            background-color: #ffffff; /* Latar belakang putih untuk form */
+            border-radius: 10px; /* Sudut melengkung */
+            padding: 30px; /* Padding di dalam form */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Bayangan halus */
+            margin-bottom: 20px; /* Ruang di bawah form */
+        }
+    </style>
+</head>
+<body>
+    <header class="row text-center">
+        <div class="col">
+            <h1 itemprop="name">Daftar Anggota Fans</h1>
+        </div>
+    </header>
+
+    <div class="content">
+        <aside class="sidebar">
+            <h2>Menu</h2>
+            <ul class="nav flex-column">
+                <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                <li class="nav-item"><a class="nav-link" href="form.html">Pendaftaran Member Fans</a></li>
+                <li class="nav-item"><a class="nav-link" href="table.html">Tabel</a></li>
+            </ul>
+        </aside>
+
+        <main class="col-lg-9">
+            <h2>Fans Member</h2>
+            <div class="table-responsive"> <!-- Tambahkan class table-responsive untuk responsivitas -->
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>No</th>
+                            <th>Nama Lengkap</th>
+                            <th>Jenis Kelamin</th>
+                            <th>Tanggal Lahir</th>
+                            <th>Alamat Email</th>
+                            <th>Anggota Favorit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Data Dummy -->
+                        <script>
+                            const names = [
+                                "Diana Prince", "Bruce Wayne", "Clark Kent", "Lois Lane", "Peter Parker", 
+                                "Wanda Maximoff", "Tony Stark", "Natasha Romanoff", "Stephen Strange", "Steve Rogers",
+                                "Barry Allen", "Arthur Curry", "Hal Jordan", "Carol Danvers", "Jennifer Walters", 
+                                "Scott Lang", "Peter Quill", "Gamora", "Drax", "Rocket Raccoon",
+                                "Vincent Vega", "Jules Winnfield", "Mia Wallace", "Butch Coolidge", "Marsellus Wallace",
+                                "Frodo Baggins", "Samwise Gamgee", "Gandalf", "Aragorn", "Legolas",
+                                "Tony Stark", "Thor Odinson", "Loki Laufeyson", "Natasha Romanoff", "Bucky Barnes",
+                                "Wolverine", "Storm", "Cyclops", "Jean Grey", "Professor X",
+                                "Deadpool", "Venom", "Green Goblin", "Doctor Octopus", "Magneto",
+                                "Darth Vader", "Luke Skywalker", "Princess Leia", "Han Solo", "Yoda"
+                            ];
+                            
+                            const favoriteMembers = [
+                                "Karina", "Winter", "Giselle", "Ningning", "Seulgi",
+                                "Joy", "Irene", "Sana", "Tzuyu", "Jisoo",
+                                "Rosé", "Lisa", "Momo", "Nayeon", "Chaeyoung",
+                                "Dahyun", "Jihyo", "Mina", "Sana", "Tzuyu",
+                                "Yoona", "Seohyun", "Taeyeon", "Sunny", "Hyoyeon"
+                            ];
+
+                            const genders = ["Laki-laki", "Perempuan"];
+                            const emails = (name) => name.toLowerCase().replace(" ", ".") + "@example.com";
+
+                            for (let i = 1; i <= 50; i++) {
+                                const name = names[Math.floor(Math.random() * names.length)];
+                                const gender = genders[Math.floor(Math.random() * genders.length)];
+                                const birthDate = `${Math.floor(Math.random() * (2000 - 1970 + 1)) + 1970}-${String(Math.floor(Math.random() * 12) + 1).padStart(2, '0')}-${String(Math.floor(Math.random() * 28) + 1).padStart(2, '0')}`;
+                                const email = emails(name);
+                                const favoriteMember = favoriteMembers[Math.floor(Math.random() * favoriteMembers.length)];
+                                
+                                document.write(`
+                                    <tr itemscope itemtype="http://schema.org/Person">
+                                        <td>${i}</td>
+                                        <td itemprop="name">${name}</td>
+                                        <td itemprop="gender">${gender}</td>
+                                        <td itemprop="birthDate">${birthDate}</td>
+                                        <td itemprop="email">${email}</td>
+                                        <td itemprop="favoriteMember">${favoriteMember}</td>
+                                    </tr>
+                                `);
+                            }
+                        </script>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+
+    <footer class="row text-center">
+        <div class="col">
+            <p>© 2024 Tabel Idola Dummy Wirrrrrr.</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

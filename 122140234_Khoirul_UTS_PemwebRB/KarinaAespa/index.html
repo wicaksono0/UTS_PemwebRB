@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="id" itemscope itemtype="http://schema.org/WebSite">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title itemprop="name">Idola Saya - Halaman Utama</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #0d1117; /* Dark background */
+        }
+        .header {
+            background-color: #161b22; /* Darker blue */
+            color: #ffffff;
+            padding: 0.1%;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        .content {
+            flex: 1;
+            display: flex;
+            padding: 10px;
+        }
+        .sidebar {
+            background-color: #21262d; /* Sidebar blackish blue */
+            padding: 20px; /* Padding for sidebar */
+            box-shadow: 2px 0 5px rgba(0, 0, 0, 0.3);
+            border-radius: 5px;
+            width: 100%; /* Set sidebar width */
+            margin-right: 20px; /* Spacing between sidebar and main content */
+        }
+        .sidebar h2 {
+            margin-bottom: 15px;
+            color: #58a6ff; /* Light blue for sidebar heading */
+        }
+        .nav {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .nav-item {
+            margin-bottom: 15px; /* Increased margin for spacing between items */
+        }
+        .nav-link {
+            color: #58a6ff; /* Light blue for nav links */
+            padding: 5px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            display: block; /* Make the link a block element for easier clicking */
+        }
+        .nav-link:hover {
+            background-color: #58a6ff; /* Light blue */
+            color: #ffffff; /* Change text color to white on hover */
+        }
+        main {
+            flex-grow: 1;
+            padding-left: 20px;
+            color: #ffffff; /* White text in main content */
+            text-align: justify; /* Justify text in main content */
+        }
+        .karina-img {
+
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 5px solid #58a6ff; /* Light blue border around the image */
+        }
+        footer {
+            background-color: #161b22; /* Darker blue */
+            color: #ffffff;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .album {
+
+            margin-bottom: 40px;
+            padding: 60px;
+            background-color: #21262d; /* Darker background for album */
+            border: 2px solid #58a6ff; /* Light blue border */
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+            flex: 1 1 800px; /* Flex item that can grow and shrink */
+            max-width: 700px; /* Maximum width for the album box */
+            margin-right: 10px; /* Add some spacing between items */
+        }
+        .album img {
+    width: 100%; /* Membuat gambar memenuhi lebar box */
+  /* Memastikan rasio aspek gambar tetap terjaga */
+    max-height: 200%; /* Atur tinggi maksimum agar tidak terlalu tinggi */
+    border-radius: 5px; /* Jika ingin sudut gambar melengkung */
+    object-fit: cover; /* Memastikan gambar tetap terisi dengan baik */
+}
+
+
+        
+        h3 {
+            color: #58a6ff; /* Light blue for section headings */
+        }
+        .gif-section {
+            margin-top: 30px;
+        }
+        .gif-section h3 {
+            color: #58a6ff; /* Light blue for the GIF section heading */
+            text-align: center;
+        }
+        .gif-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+        .gif-container img {
+
+            border-radius: 10px;
+            margin-bottom: 20px;
+            border: 3px solid #58a6ff; /* Light blue border for GIFs */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for the GIFs */
+        }
+        @media (max-width: 768px) {
+            .content {
+                flex-direction: column;
+            }
+            .sidebar {
+                margin-bottom: 20px;
+                max-width: none;
+            }
+            main {
+                padding-left: 0;
+            }
+            .gif-container {
+                justify-content: center; /* Center GIFs on smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Header: Skema Organization -->
+        <header class="header text-center" itemscope itemtype="http://schema.org/Organization">
+            <h1 itemprop="name">K A R I N A</h1>
+            <img src="images/karina header.jpeg" alt="Logo Idola Saya" class="img-fluid" style="max-width: 150px;" itemprop="logo">
+        </header>
+
+        <div class="content">
+            <aside class="sidebar d-none d-lg-block">
+                <h2>Menu</h2>
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Beranda</a></li>
+                    <li class="nav-item"><a class="nav-link" href="form.html">Pendaftaran Member Fans</a></li>
+                    <li class="nav-item"><a class="nav-link" href="table.html">Tabel</a></li>
+                </ul>
+            </aside>
+
+            <!-- Main: Skema Person untuk Karina AESPA -->
+            <main class="flex-grow-1" itemscope itemtype="http://schema.org/Person">
+                <h2>KARINA alias Yu Jimin</h2>
+                <!-- Gambar Karina -->
+                <img src="images/karina.png" alt="Karina Aespa" class="karina-img img-fluid" itemprop="image">
+
+                <p itemprop="description">
+                    <span itemprop="name">Karina</span>, yang memiliki nama asli Yoo Ji-min, lahir pada 11 April 2000, adalah seorang penyanyi dan penari asal Korea Selatan yang dikenal sebagai leader, main dancer, lead vocalist, dan visual dari grup K-pop <span itemprop="affiliation">aespa</span> yang dibentuk oleh SM Entertainment. Ia diperkenalkan sebagai anggota pertama aespa pada tahun 2020 dan sejak itu telah menjadi salah satu ikon dalam industri musik K-pop. Sebelum debut, Karina menjalani pelatihan selama lebih dari empat tahun di SM Entertainment, di mana ia mengembangkan bakat menarinya dalam berbagai genre. Debut resmi aespa terjadi pada 17 November 2020 dengan lagu <span itemprop="work">"Black Mamba"</span>, yang langsung mendapatkan perhatian luas dari penggemar K-pop di seluruh dunia.
+                </p>
+                
+                <p itemprop="description">
+                    Karina dikenal dengan gaya yang chic dan fashionable, sering kali tampil dengan berbagai konsep yang menarik. Di atas panggung, ia menampilkan energi tinggi dan kemampuan menari yang memukau, menjadikannya pusat perhatian dalam setiap pertunjukan. Selain itu, pesonanya yang menawan membuat penggemar jatuh cinta, baik saat tampil maupun di luar panggung. Sejak debut, aespa telah merilis beberapa lagu dan album sukses, termasuk <span itemprop="work">"Next Level"</span> (2021), <span itemprop="work">"Savage"</span> (2021), <span itemprop="work">"Black Mamba"</span> (2020), dan <span itemprop="work">"Forever"</span> (2021). Karina juga terlibat dalam berbagai proyek solo dan kolaborasi, menunjukkan kemampuannya dalam berbagai genre musik.
+                </p>
+                
+                <p itemprop="description">
+                    Dalam kehidupan pribadinya, Karina dikenal sebagai pribadi yang ceria dan ramah, sering berinteraksi dengan penggemar melalui media sosial dan siaran langsung untuk berbagi tentang kehidupan sehari-harinya dan perkembangan kariernya. Karina dan aespa telah menerima banyak penghargaan dan nominasi, termasuk penghargaan di Mnet Asian Music Awards dan Seoul Music Awards, berkat prestasi mereka yang mengesankan di industri musik. Sebagai inspirasi bagi banyak penggemar, terutama bagi mereka yang ingin mengejar karier di dunia seni pertunjukan, Karina menunjukkan bakat dan dedikasinya yang luar biasa. Dengan kombinasi bakat, visual, dan kepribadian yang menarik, ia terus menarik perhatian penggemar di seluruh dunia dan diprediksi akan menjadi salah satu ikon besar di masa depan.
+                </p>
+                
+                <p itemprop="jobTitle">Leader dan Main Dancer AESPA</p>
+                <p>Grup: <span itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+                    <span itemprop="name">AESPA</span>
+                </span></p>
+                <p itemprop="nationality">Korea Selatan</p>
+
+                <!-- Perjalanan Karir Karina -->
+                <h3>Perjalanan Karina dari Debut Hingga Sekarang</h3>
+                <p itemprop="description">
+                    Karina memulai debutnya pada tahun 2020 bersama <span itemprop="affiliation">AESPA</span> dengan lagu 
+                    <span itemprop="name">"Black Mamba"</span>, sebuah lagu yang langsung menjadi hits dan membawa nama grup ini 
+                    melambung di kancah musik internasional. Sebagai seorang trainee di <span itemprop="affiliation">SM Entertainment</span> selama beberapa tahun, 
+                    Karina menunjukkan ketekunan dan kerja keras yang akhirnya terbayar saat debutnya.
+                </p>
+                <p itemprop="description">
+                    Setelah debut, Karina bersama <span itemprop="affiliation">AESPA</span> terus mendapatkan perhatian dunia, terutama setelah 
+                    lagu-lagu seperti <span itemprop="name">"Next Level"</span> dan <span itemprop="name">"Savage"</span> dirilis. <span itemprop="affiliation">AESPA</span> dikenal dengan 
+                    konsep futuristik dan visual yang menarik, dan Karina menjadi sorotan berkat kemampuan menarinya yang luar biasa serta suaranya yang kuat. 
+                    Pada tahun 2021, grup ini meraih penghargaan rookie di berbagai ajang penghargaan musik bergengsi, termasuk <span itemprop="name">MAMA</span> dan 
+                    <span itemprop="name">Golden Disk Awards</span>.
+                </p>
+                <p itemprop="description">
+                    Seiring perjalanan karirnya, Karina juga berkembang menjadi ikon fashion dan kecantikan, dengan berbagai kolaborasi dengan merek terkenal. 
+                    Ia diakui sebagai salah satu idola generasi keempat yang paling berpengaruh di dunia K-pop, dan terus menginspirasi banyak orang 
+                    dengan kepribadiannya yang penuh semangat, tetapi tetap rendah hati di tengah popularitas yang terus meningkat.
+                </p>
+                
+
+                <!-- Skema Merchandise -->
+                <h3>Album AESPA</h3>
+                <div class="row">
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="album border border-primary rounded p-3">
+                            <h4 itemprop="name">1. Album "Savage" (2021)</h4>
+                            <img src="images/aespasavage.jpeg" alt="Album Savage AESPA" itemprop="image" class="img-fluid rounded" >
+                            <p itemprop="description">Album pertama dari AESPA, "Savage", mencakup lagu-lagu hit seperti "Next Level" yang membawa grup ini meraih popularitas internasional.</p>
+                            <p>Harga: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="25.00">25</span></p>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="album border border-primary rounded p-3">
+                            <h4 itemprop="name">2. Mini Album "Girls" (2022)</h4>
+                            <img src="images/aespagirls.jpeg" alt="Mini Album Girls AESPA" itemprop="image" class="img-fluid rounded" >
+                            <p itemprop="description">Mini album kedua, "Girls", menampilkan lagu-lagu baru yang menunjukkan perkembangan musikal AESPA serta peningkatan popularitas Karina.</p>
+                            <p>Harga: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="30.00">30</span></p>
+                        </div>
+                    </div>
+            
+                    <div class="col-12 col-sm-6 col-md-4 mb-4">
+                        <div class="album border border-primary rounded p-3">
+                            <h4 itemprop="name">3. Album "MY WORLD" (2023)</h4>
+                            <img src="images/aespamyworld.jpeg" alt="Album MY WORLD AESPA" itemprop="image" class="img-fluid rounded" >
+                            <p itemprop="description">Album terbaru, "MY WORLD", memperlihatkan kedewasaan musik AESPA dan semakin banyak kolaborasi dengan artis lain, menandakan evolusi Karina dan grup.</p>
+                            <p>Harga: <span itemprop="priceCurrency" content="USD">$</span><span itemprop="price" content="35.00">35</span></p>
+                        </div>
+                    </div>
+
+
+                        <!-- GIF Section -->
+                        <div class="gif-section" itemscope itemtype="http://schema.org/Person">
+                            <h3>B O N U S</h3>
+                            <div class="gif-container">
+                                <img src="images/karina1.gif" alt="Karina Gif 1" class="img-fluid">
+                                <img src="images/karina2.gif" alt="Karina Gif 2" class="img-fluid">
+                                <img src="images/karina5.gif" alt="Karina Gif 3" class="img-fluid">
+                                <img src="images/karina4.gif" alt="Karina Gif 4" class="img-fluid">
+                                <img src="images/karina3.gif" alt="Karina Gif 5" class="img-fluid">
+                            </div>
+                        </div>
+                    </main>
+                </div>
+
+        <footer class="text-center p-3">
+            <p>© 2024 Cewek guehhh.</p>
+        </footer>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+</body>
+</html>
